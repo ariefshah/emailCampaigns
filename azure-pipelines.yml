@@ -19,5 +19,12 @@ steps:
     npm install -g @angular/cli
     npm install
     ng build --prod
-    npm run deploy
+    
   displayName: 'npm install and build'
+  - task: S3Upload@1
+    inputs:
+      awsCredentials: 'aws'
+      regionName: 'ap-southeast-2'
+      bucketName: 'www.standwithkashmir.org.au'
+      sourceFolder: 'facts-test'
+      globExpressions: '**'
