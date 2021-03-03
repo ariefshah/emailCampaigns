@@ -28,4 +28,4 @@ steps:
     bucketName: 'www.standwithkashmir.org.au'
     sourceFolder: 'dist'
     globExpressions: '**'
-    targetFolder: 'facts-test'
+    targetFolder: 'factstest'
